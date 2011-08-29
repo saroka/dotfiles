@@ -1,7 +1,8 @@
 . ~/.zsh/aliases
 
 # changing directory to code project
-function c { cd ~/code/$1; }
+function locaweb { cd ~/workspace/locaweb/$1; }
+function my { cd ~/workspace/my/$1; }
 
 # alternative to "rails" command to use templates
 function railsapp {
@@ -11,5 +12,18 @@ function railsapp {
   rails $appname -m http://github.com/ryanb/rails-templates/raw/master/$template.rb $@
 }
 
+alias ..="cd .."
+alias ...="cd .. ; cd .."
+alias ls="ls -G" # list
+alias la="ls -Ga" # list all, includes dot files
+alias ll="ls -Gl" # long list, excludes dot files
+alias lla="ls -Gla" # long list all, includes dot files
+alias gco='git co'
+alias gci='git ci'
+alias grb='git rb'
+alias gst='git st'
+
 # misc
 alias reload='. ~/.bash_profile'
+alias gateway='ssh -i ~/.ssh/id_rsa_gateway _esaroka@nibbler0001.linux.locaweb.com.br'
+alias mongod_start='mongod > /dev/null 2>&1 &'

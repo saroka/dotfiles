@@ -1,2 +1,5 @@
 export PATH="~/bin:~/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+export ANDROID_HOME="/usr/local/android-sdk-mac_x86/"
+export ANDROID_NDK="/usr/local/android-ndk-r5b/"
+export PATH="$MAVEN_PATH/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"

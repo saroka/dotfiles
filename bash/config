@@ -1,2 +1,40 @@
 export PS1="\w$ "
 export EDITOR="mate_wait"
+
+## Colors
+# colors for misc things
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31'
+export CLICOLOR=1
+
+# Set colors
+export LS_COLORS='di=1;36:fi=0:ln=4;34:pi=5:so=4;5:bd=5:cd=5:or=4;91:mi=4;92:ex=35:*.rb=90'
+
+# used in command prompt
+NM="\[\033[0;38m\]" #means no background and white lines
+HI="\[\033[0;37m\]" #change this for letter colors
+HII="\[\033[0;31m\]" #change this for letter colors
+SI="\[\033[0;33m\]" #this is for the current directory
+IN="\[\033[0m\]"
+
+## Command Prompt ##
+
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+
+if [ ${USER} == "root" ];then
+    export PS1="$HII\w$NM $ $IN"
+fi
+
+if [ ${USER} == "saroka" ];then
+	#export PS1="$SI\w$NM $ $IN"
+	export PS1='\[\033[0;33m\]\w\[\033[0;38m\] $(__git_ps1 "[\[\e[0;32m\]%s\[\e[0m\]\[\e[0;33m\]$(parse_git_dirty)\[\e[0m\]]")$ \[\033[0m\]'
+fi
+
+# Set terminal window title
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
