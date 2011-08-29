@@ -38,3 +38,6 @@ fi
 
 # Set terminal window title
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
+
+# This loads RVM into a shell session
+[[ -s "/Users/saroka/.rvm/scripts/rvm" ]] && source "/Users/saroka/.rvm/scripts/rvm"
