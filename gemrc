@@ -6,7 +6,6 @@ gem: --no-ri --no-rdoc
 - http://rubygems.org
 - http://gems.rubyforge.org
 - http://gems.github.com
-- http://gems.locaweb.com.br/
 :backtrace: false
 :bulk_threshold: 1000
 :benchmark: false
