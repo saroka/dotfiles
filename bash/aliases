@@ -29,3 +29,5 @@ alias gateway='ssh -i ~/.ssh/id_rsa_gateway _esaroka@nibbler0001.linux.locaweb.c
 alias mongod_start='mongod > /dev/null 2>&1 &'
 alias use192='rvm use ruby-1.9.2@webdesk'
 alias use187='rvm use ree@webdesk'
+alias hpush='git push heroku master'
+alias hpull='git pull heroku master'
