@@ -28,4 +28,10 @@ alias reload='. ~/.bash_profile'
 alias gateway='ssh -i ~/.ssh/id_rsa_gateway _esaroka@nibbler0001.linux.locaweb.com.br'
 alias mongod_start='mongod > /dev/null 2>&1 &'
 function rgrep { grep -r "$1" .; }
-
+function padrino {
+	case "$1" in
+		s) bundle exec padrino start ;;
+		c) bundle exec padrino console ;;
+		*) bundle exec padrino $@ ;;
+	esac
+}
