@@ -27,6 +27,7 @@ alias gst='git st'
 alias reload='. ~/.bash_profile'
 alias gateway='ssh -i ~/.ssh/id_rsa_gateway _esaroka@nibbler0001.linux.locaweb.com.br'
 alias mongod_start='mongod > /dev/null 2>&1 &'
+alias redis_start='redis-server > /dev/null 2>&1 &'
 function rgrep { grep -r "$1" .; }
 function padrino {
 	case "$1" in
