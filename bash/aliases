@@ -22,6 +22,7 @@ alias gco='git co'
 alias gci='git ci'
 alias grb='git rb'
 alias gst='git st'
+alias gds='git describe'
 
 # misc
 alias reload='. ~/.bash_profile'
