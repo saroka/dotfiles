@@ -7,7 +7,11 @@ export ANDROID_NDK="/usr/local/android-ndk-r5c/"
 export CATALINA_HOME="/usr/local/tomcat/"
 export MAVEN_HOME="/usr/local/apache-maven-3.0.3/"
 export ECLIPSE_HOME="/usr/local/eclipse/"
+export MAGICK_HOME="/usr/local/ImageMagick-6.7.5"
 
-export PATH="$MAVEN_PATH/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$MONGODB/bin:$REDIS/src:$MAVEN_HOME/bin:$PATH"
+
+export PATH="$MAVEN_PATH/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$MONGODB/bin:$REDIS/src:$MAVEN_HOME/bin:$MAGICK_HOME/bin:$PATH"
+#export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib/"
 #export CC=/usr/bin/gcc-4.2
